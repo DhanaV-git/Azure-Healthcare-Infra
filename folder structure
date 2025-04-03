@@ -1,0 +1,50 @@
+azure-healthcare-infra/
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml                # GitHub Actions workflow for Terraform CI/CD
+│   └── README.md                    # Overview of GitHub configs
+│
+├── infrastructure/                 # Root Terraform deployment
+│   ├── main.tf                     # Calls all modules
+│   ├── variables.tf                # Declares input variables
+│   ├── outputs.tf                  # Global outputs
+│   ├── terraform.tfvars            # Variable values
+│   ├── README.md                   # Infra setup instructions
+│   └── modules/
+│       ├── resource_group/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       ├── network/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       ├── sql/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       ├── databricks/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   └── outputs.tf
+│       └── apim/
+│           ├── main.tf
+│           ├── variables.tf
+│           └── outputs.tf
+│
+├── notebooks/
+│   ├── ingest_data.py              # Ingest CSV patient data
+│   ├── analyze_patient_risk.py     # Risk categorization notebook
+│   └── README.md                   # Databricks notebook usage
+│
+├── scripts/
+│   ├── upload-notebooks.sh         # CLI-based notebook uploader
+│   └── README.md                   # Scripts usage and CLI setup
+│
+├── pipelines/
+│   ├── azure-pipelines.yml         # Azure DevOps pipeline for infra + notebooks
+│   └── README.md                   # CI/CD pipeline documentation
+│
+├── .gitignore
+└── README.md                       # 🌐 Top-level overview
