@@ -50,7 +50,7 @@ This project provides a complete **Azure-based infrastructure** solution for a h
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-org/azure-healthcare-infra.git
+git clone https://github.com/DhanaV-git/azure-healthcare-infra.git
 cd azure-healthcare-infra/infrastructure
 ```
 
